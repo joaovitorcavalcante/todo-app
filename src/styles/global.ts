@@ -14,9 +14,13 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
     background-color: ${({ theme }) => theme.colors.base};
     background-image: url(${bgImg});
     background-repeat: no-repeat;
+  }
+
+  input, select, textarea, button {
+    font-family: 'Josefin Sans', sans-serif;
   }
 `;

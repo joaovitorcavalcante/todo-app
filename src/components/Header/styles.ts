@@ -14,7 +14,7 @@ export const Content = styled.div`
 
 export const Title = styled.h1`
   font-size: 2.6rem;
-  letter-spacing: 1 rem;
+  letter-spacing: 1rem;
   text-transform: uppercase;
 `;
 
