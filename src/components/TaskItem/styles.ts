@@ -8,6 +8,19 @@ type TaskCheckIconProps = {
   isCompleted: boolean;
 };
 
+export const RemoveIcon = styled.img`
+  width: 12px;
+  height: 12px;
+
+  cursor: pointer;
+
+  @media (min-width: 376px) {
+    display: none;
+    width: 18px;
+    height: 18px;
+  }
+`;
+
 export const Container = styled.li`
   display: flex;
   align-items: center;
@@ -20,6 +33,10 @@ export const Container = styled.li`
 
   @media (min-width: 376px) {
     padding: 2rem 2.4rem;
+
+    &:hover ${RemoveIcon} {
+      display: block;
+    }
   }
 `;
 
@@ -76,17 +93,9 @@ export const Description = styled.p<TaskDescriptionProps>`
     font-size: 1.8rem;
     line-height: 1.8rem;
     letter-spacing: -0.25px; /* Figma tá maluco */
-  }
-`;
 
-export const RemoveIcon = styled.img`
-  width: 12px;
-  height: 12px;
-
-  cursor: pointer;
-
-  @media (min-width: 376px) {
-    width: 18px;
-    height: 18px;
+    &:hover {
+      cursor: pointer;
+    }
   }
 `;
