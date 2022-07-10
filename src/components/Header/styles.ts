@@ -4,7 +4,7 @@ export const Container = styled.header`
   margin-top: 4.8rem;
 
   @media (min-width: 376px) {
-    margin-top: 7rem;
+    margin-top: 8.1rem;
   }
 `;
 
