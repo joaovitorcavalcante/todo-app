@@ -26,6 +26,7 @@ export function NewTaskField({ onAddNewTask }: NewTaskFieldProps) {
       isCompleted: false,
     };
 
+    setNewTaskName('');
     onAddNewTask(newTask);
   }
 
@@ -40,6 +41,7 @@ export function NewTaskField({ onAddNewTask }: NewTaskFieldProps) {
         <S.Input
           placeholder="Create a new todo…"
           onChange={handleNewTaskNameChange}
+          value={newTaskName}
         />
       </S.Content>
     </S.Container>

@@ -7,10 +7,14 @@ declare module 'styled-components' {
     colors: {
       base: string;
       primary: string;
+      border: string;
+      shadow: string;
+
       text: string;
-      checkBorder: string;
-      inputPlaceholder: string;
-      inputShadow: string;
+      textCompleted: string;
+
+      label: string;
+      labelActive: string;
     };
   }
 }

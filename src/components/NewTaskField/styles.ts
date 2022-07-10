@@ -9,7 +9,7 @@ export const Content = styled.div`
 
   padding: 1.4rem 2rem;
   border-radius: 5px;
-  box-shadow: 0px 35px 50px -15px ${({ theme }) => theme.colors.inputShadow};
+  box-shadow: 0px 35px 50px -15px ${({ theme }) => theme.colors.shadow};
 
   background-color: ${({ theme }) => theme.colors.primary};
 `;
@@ -18,7 +18,7 @@ export const CheckIcon = styled.div`
   width: 2.2rem;
   height: 2rem;
 
-  border: 1px solid ${({ theme }) => theme.colors.checkBorder};
+  border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 50%;
 
   background-color: inherit;
@@ -38,7 +38,7 @@ export const Input = styled.input`
 
   ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: ${({ theme }) => theme.colors.inputPlaceholder};
+    color: ${({ theme }) => theme.colors.label};
     opacity: 1; /* Firefox */
   }
 `;
