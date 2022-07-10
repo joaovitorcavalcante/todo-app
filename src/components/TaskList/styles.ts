@@ -142,3 +142,18 @@ export const ContentFooterItem = styled.p<ContentFooterItemProps>`
       color: ${theme.colors.labelActive};
     `}
 `;
+
+export const Legend = styled.p`
+  margin: 4rem 0rem 7.2rem;
+
+  font-size: 1.4rem;
+  letter-spacing: -0.19px;
+  text-align: center;
+
+  color: ${({ theme }) => theme.colors.label};
+
+  @media (min-width: 376px) {
+    margin-top: 4.9rem 0 5.2rem;
+    font-size: 1.4rem;
+  }
+`;

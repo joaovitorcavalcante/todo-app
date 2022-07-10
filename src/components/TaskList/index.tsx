@@ -108,6 +108,8 @@ export function TaskList({
           </S.ContentFooterItem>
         </S.ContentFooter>
       )}
+
+      <S.Legend>Drag and drop to reorder list</S.Legend>
     </S.Container>
   );
 }
