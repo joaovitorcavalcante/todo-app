@@ -12,6 +12,10 @@ export const Content = styled.div`
   box-shadow: 0px 35px 50px -15px ${({ theme }) => theme.colors.shadow};
 
   background-color: ${({ theme }) => theme.colors.primary};
+
+  @media (min-width: 376px) {
+    padding: 2rem 2.4rem;
+  }
 `;
 
 export const CheckIcon = styled.div`
@@ -22,6 +26,11 @@ export const CheckIcon = styled.div`
   border-radius: 50%;
 
   background-color: inherit;
+
+  @media (min-width: 376px) {
+    width: 2.4rem;
+    height: 2.2rem;
+  }
 `;
 
 export const Input = styled.input`
@@ -40,5 +49,13 @@ export const Input = styled.input`
     /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: ${({ theme }) => theme.colors.label};
     opacity: 1; /* Firefox */
+  }
+
+  @media (min-width: 376px) {
+    margin-left: 2.4rem;
+
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    letter-spacing: -0.25px; /* identical to box height */
   }
 `;

@@ -54,7 +54,32 @@ export function TaskList({
               {tasks.filter((task) => task.isCompleted === false).length} items
               left
             </S.ContentBodyItem>
-            <S.ContentBodyItem onClick={onRemoveAllTasksCompleted}>
+
+            <S.ContentItems>
+              <S.ContentItem
+                onClick={() => setActiveFilter('all')}
+                isActive={activeFilter === 'all'}
+              >
+                All
+              </S.ContentItem>
+
+              <S.ContentItem
+                onClick={() => setActiveFilter('active')}
+                isActive={activeFilter === 'active'}
+                style={{ margin: '0 1.8rem' }}
+              >
+                Active
+              </S.ContentItem>
+
+              <S.ContentItem
+                onClick={() => setActiveFilter('completed')}
+                isActive={activeFilter === 'completed'}
+              >
+                Completed
+              </S.ContentItem>
+            </S.ContentItems>
+
+            <S.ContentBodyItem isClicked onClick={onRemoveAllTasksCompleted}>
               Clear Completed
             </S.ContentBodyItem>
           </S.ContentBodyFooter>

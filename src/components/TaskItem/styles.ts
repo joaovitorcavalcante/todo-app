@@ -17,6 +17,10 @@ export const Container = styled.li`
   :last-child {
     border-bottom: none;
   }
+
+  @media (min-width: 376px) {
+    padding: 2rem 2.4rem;
+  }
 `;
 
 export const CheckIcon = styled.div<TaskCheckIconProps>`
@@ -32,11 +36,22 @@ export const CheckIcon = styled.div<TaskCheckIconProps>`
 
   background-color: inherit;
 
+  cursor: pointer;
+
   ${({ isCompleted, theme }) =>
     isCompleted &&
     css`
       background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
     `}
+
+  @media (min-width: 376px) {
+    width: 2.4rem;
+    height: 2.4rem;
+
+    :hover {
+      border: 1px solid linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+    }
+  }
 `;
 
 export const Description = styled.p<TaskDescriptionProps>`
@@ -54,9 +69,24 @@ export const Description = styled.p<TaskDescriptionProps>`
       color: ${theme.colors.textCompleted};
       text-decoration-line: line-through;
     `}
+
+  @media (min-width: 376px) {
+    margin-left: 2.4rem;
+
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    letter-spacing: -0.25px; /* Figma tá maluco */
+  }
 `;
 
 export const RemoveIcon = styled.img`
   width: 12px;
   height: 12px;
+
+  cursor: pointer;
+
+  @media (min-width: 376px) {
+    width: 18px;
+    height: 18px;
+  }
 `;

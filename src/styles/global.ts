@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
-import bgImg from '../assets/images/bg-mobile-light.jpg';
+import bgImgMobile from '../assets/images/bg-mobile-light.jpg';
+import bgImgDesktop from '../assets/images/bg-desktop-light.jpg';
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -16,8 +17,12 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
     background-color: ${({ theme }) => theme.colors.base};
-    background-image: url(${bgImg});
+    background-image: url(${bgImgMobile});
     background-repeat: no-repeat;
+
+    @media (min-width: 376px) {
+      background-image: url(${bgImgDesktop});
+    }
   }
 
   input, select, textarea, button {
